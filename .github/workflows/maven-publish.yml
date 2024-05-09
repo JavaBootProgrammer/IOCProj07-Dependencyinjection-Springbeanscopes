@@ -11,5 +11,7 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
+          cache: 'maven'
+          cache-dependency-path: 'sub-project/pom.xml' # optional
       - name: Run the Maven verify phase
         run: mvn --batch-mode --update-snapshots verify
